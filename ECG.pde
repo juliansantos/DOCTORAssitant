@@ -6,14 +6,22 @@
     4. Please select your gender
 */
     
-PImage room, gender1, gender2, man, women, doctor;
+PImage room, gender1, gender2, man, women, doctor, happyface, sadface, distractedface;
+PImage euphoricface, scaredface;
 
 void setup(){
   size(976,576);
   room =loadImage("inside.jpg");
   gender1 = loadImage("gender1.png");
   gender2 = loadImage("gender2.png");
-  //doctor = loadImage(""); 
+  doctor = loadImage("bodydoctor.png");
+  happyface = loadImage("face1.png");
+  euphoricface = loadImage("face2.png");
+  scaredface = loadImage("face5.png"); 
+  distractedface = loadImage("face3.png");
+  sadface = loadImage("face4.png");
+  
+  //loadImage("");
   //man = loadImage("man.png");
   //women = loadImage("women.png");
  
@@ -22,7 +30,8 @@ void setup(){
 }
 
 void draw(){
-
+  image(doctor, 300, 300);
+  image(distractedface, 326,226);
 }
 
 void mousePressed(){
