@@ -1,12 +1,13 @@
 // Description 
 /* Steps: 
-    2. Import images of the man and a women
     3. Create a message in a cloud that say (Hi I'm Julian Santos! I will be your doctor today)
     4. Please select your gender
+    5. Generate PQRST signal 
+    6. Change expressions depending of the input signal. 
 */
     
 PImage room, gender1, gender2, man, woman, doctor, happyface, sadface, distractedface;
-PImage euphoricface, scaredface;
+PImage euphoricface, scaredface, board;
 
 void setup(){
   size(976,576);
@@ -19,8 +20,9 @@ void setup(){
   scaredface = loadImage("face5.png"); 
   distractedface = loadImage("face3.png");
   sadface = loadImage("face4.png");
-  woman = loadImage("woman.png");
+  woman = loadImage("women.png");
   man = loadImage("men.png");
+  board = loadImage("board.png");
   //loadImage("");
   //man = loadImage("man.png");
   //women = loadImage("women.png");
@@ -31,19 +33,18 @@ void setup(){
 
 void draw(){
   image(doctor, 300, 300);
-  image(distractedface, 326,226);
+  image(euphoricface, 326,226);
+  image(board,422,40);
   
 }
 
 void mousePressed(){
   if(mouseX>845&&mouseX<885&&mouseY>60&&mouseY<128){  image(gender1,845,60); 
-      tint(255, 0); image(woman, 110,206);
-      tint(255, 255); image(man, 100,180); 
+   image(man, 103,177); 
        } // this is for gender selection Man
       
   else if (mouseX>885&&mouseX<925&&mouseY>60&&mouseY<128){  image(gender2,845,60); 
-      tint(255, 0); image(man, 100,180);
-      tint(255, 255); image(woman, 110,206);
+ image(woman, 95,173);
         } // this is for gender selection Women
   
 }
