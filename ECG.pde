@@ -7,7 +7,7 @@
 */
     
 PImage room, gender1, gender2, man, woman, doctor, happyface, sadface, distractedface;
-PImage euphoricface, scaredface, board;
+PImage euphoricface, scaredface, board, ekg;
 
 void setup(){
   size(976,576);
@@ -23,20 +23,33 @@ void setup(){
   woman = loadImage("women.png");
   man = loadImage("men.png");
   board = loadImage("board.png");
+  ekg = loadImage("EKG.png");
   //loadImage("");
   //man = loadImage("man.png");
   //women = loadImage("women.png");
  
  // tint(255,0);
   background(room);
+  image(doctor, 300, 300);
+  image(euphoricface, 326,226);
+  
+}
+
+void startrek(){
+  // saying hi to the user
+  String mes ="Hola, mi nombre es Julian y hoy sere tu doctor";
+    image(board,433,53); // Board  
+  image(ekg, 468, 85);
+    fill(0);
+  text("Doctor",433,250);
 }
 
 void draw(){
-  image(doctor, 300, 300);
-  image(euphoricface, 326,226);
-  image(board,422,40);
+  image(board,433,53); // Board
+
   
 }
+
 
 void mousePressed(){
   if(mouseX>845&&mouseX<885&&mouseY>60&&mouseY<128){  image(gender1,845,60); 
